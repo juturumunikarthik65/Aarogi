@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarogi | Healthcare Platform</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    <div class="header">
+        <div class="profile-icon" id="profile-icon">
+            <i class="material-icons">account_circle</i>
+        </div>
+        <h1>Aarogi</h1>
+        <button class="fill-form-btn">Login</button>
+    </div>
+    
+    <div class="side-nav" id="side-nav">
+        <div class="side-nav-header">
+            <h2>Welcome, <span id="name"></span></h2>
+            <button class="close-btn" id="side-nav-close">&times;</button>
+        </div>
+        <div class="side-nav-content">
+            <!-- Add your side navigation content here -->
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <img src="C:\Aarogi\AarogiImg\image1.jpeg" alt="image1" class="main-content-img">
+        <div class="main-content-text">Our goal is to make baby mothers and 50+ age group people be healthy</div>
+        <div class="rectangle-bar-container">
+            <div class="rectangle-bar left active" id="left-rectangle">Baby mother</div>
+            <div class="rectangle-bar right" id="right-rectangle" style="border: solid 2px #333;">50+ age person</div>
+        </div>
+       
+    </div>
+    <div class="left-info continer" id="image-container">
+        <img src="C:\Aarogi\AarogiImg\image2.jpeg" class="content-image" style="max-width:100%;">
+        <p>As a mother, it's important to ensure that both you and your baby have a healthy life</p>
+        <p class="aarogi-text" style="background-color: rgba(158, 95, 238, 1); color:white;">Aarogi is here to support you in ensuring a healthy life for both you and your baby</p>
+        <div class="aarogi-detail">
+  <p>
+    <span>Aarogi</span> will provide one healthcare specialist to 10 mother-baby pairs for one hour, three days a week through Google Meet video call for only <span>Rs. 299</span> per month. Our healthcare specialists are fully qualified and ready to have friendly video conversations with you.
+  </p>
+</div>
+<button class="join-btn" id="join-btn" onclick="GetStart()">Get Started</button>
+ 
+<div class="nutrition-container">
+    <h2 class="nutrition-heading">Nutrition for the Mother and Baby</h2>
+    <div class="nutrition-item">
+        <img src="C:\Aarogi\AarogiImg\image4.jpeg" alt="milk and milk products" class="nutrition-img">
+        <p class="nutrition-text">Milk and Milk Products: Milk is a rich source of calcium, protein and essential vitamins and minerals. It is important for the growth and development of the baby. Milk products like curd and paneer are also rich in probiotics which aid in good digestion and boost the immune system.</p>
+    </div>
+    <div class="nutrition-item">
+        <img src="C:\Aarogi\AarogiImg\image5.jpeg" alt="leafy greens" class="nutrition-img">
+        <p class="nutrition-text">Leafy Greens: Leafy greens like spinach, methi, and amaranth leaves are rich in iron, calcium, and folic acid. These are essential for the baby's neural development and also prevent anemia in the mother.</p>
+    </div>
+    <div class="nutrition-item">
+        <img src="C:\Aarogi\AarogiImg\image6.jpeg" alt="lentils and beans" class="nutrition-img">
+        <p class="nutrition-text">Lentils and Beans: Lentils and beans like Toor dal, Moong dal, and Chickpeas are a great source of protein, iron, and folic acid. These are important for the growth and development of the baby and also provide energy to the mother.</p>
+    </div>
+    <div class="nutrition-item">
+        <img src="C:\Aarogi\AarogiImg\image7.jpeg" alt="fruits" class="nutrition-img">
+        <p class="nutrition-text">Fruits: Fruits like guava, papaya, and oranges are rich in Vitamin C and Vitamin A. These are important for the baby's immune system and also help in the absorption of iron. They also provide essential antioxidants and fibers for the mother's overall health.</p>
+    </div>
+    <div class="nutrition-item">
+    <img src="C:\Aarogi\AarogiImg\image8.jpeg" alt="seeds and nuts" class="nutrition-img">
+    <p class="nutrition-text">Seeds and Nuts: Seeds and nuts like flaxseeds, chia seeds, and almonds are rich in omega-3 fatty acids, protein, and Vitamin E. These are important for the baby's brain development and also provide energy to the mother.</p>
+    </div>
+    
+  </div>
+   <h1 style="text-align:left; width: 100%; margin-left: 15px; color: #333;">Benefits</h1>
+  <div class="slideshow-container">
+    <div class="slide-box">
+      <h3>Continuity of Care</h3>
+      <p>Aarogi provides continuity of care by providing one healthcare specialist to 10 mother-baby pairs for one hour, three days a week, which helps to build trust and understanding between the mother and the specialist over time.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Accessibility</h3>
+        <p>Aarogi's platform ensures that all mothers, regardless of location, have access to healthcare specialists. This is especially important for mothers living in remote or under-served areas.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Cost-effective</h3>
+        <p>By using Aarogi, mothers can save money on transportation costs and other expenses associated with in-person visits. The platform is also more affordable than traditional in-person care.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Personalized Care</h3>
+        <p>Aarogi healthcare specialists are able to provide personalized care to each mother-baby pair, taking into account their individual needs and concerns.</p>
+    </div>
+    <div class="slide-box">
+      <h3>Convenience</h3>
+      <p>Aarogi healthcare platform allows mothers to connect with healthcare specialists from the comfort of their own home, saving them time and effort compared to traditional in-person visits.</p>
+    </div>
+</div>
+
+  
+      
+</div>
+
+
+    <div class="right-info continer" id="image-container1" style="display: none;">
+        <img src="C:\Aarogi\AarogiImg\image3.jpeg" class="content-image" style="max-width:100%; margin-top:5px; border-radius: 3px;">
+        <p>As a member of the 50+ age group, it is important to take care of your health in order to maintain wellness and strength</p>
+        <p class="aarogi-text" style="background-color: rgba(158, 95, 238, 1); color:white;">Aarogi is here to support you in ensuring a healthy life with the help of technology</p>
+        <div class="aarogi-detail">
+  <p>
+    <span>Aarogi</span> will provide one healthcare specialist to 10 50+ age group people for one hour, three days a week through Google Meet video call for only <span>Rs. 249</span> per month. Our healthcare specialists are fully qualified and ready to have friendly video conversations with you.
+  </p>
+</div>
+<button class="join-btn" id="join-btn" onclick="GetStart()">Get Started</button>
+
+ 
+<div class="nutrition-container">
+    <h2 class="nutrition-heading">Healthcare for the 50+ Age Group</h2>
+    <div class="nutrition-item">
+      <img src="C:\Aarogi\AarogiImg\image9.jpeg" alt="Regular health check-ups" class="nutrition-img">
+      <p class="nutrition-text">Regular health check-ups: As you age, your risk of chronic conditions such as diabetes, hypertension, and heart disease increases. Regular check-ups can help detect and prevent these conditions.</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="C:\Aarogi\AarogiImg\image10.jpeg" alt="Exercise regularly" class="nutrition-img">
+      <p class="nutrition-text">Exercise regularly: Regular physical activity can help maintain strength, flexibility, and balance, reducing the risk of falls and injuries.</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="C:\Aarogi\AarogiImg\image11.jpeg" alt="Eat a healthy diet" class="nutrition-img">
+      <p class="nutrition-text">Eat a healthy diet: A diet rich in fruits, vegetables, whole grains, and lean proteins can help maintain a healthy weight and reduce the risk of chronic diseases.</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="C:\Aarogi\AarogiImg\image12.jpeg" alt="Get enough sleep" class="nutrition-img">
+      <p class="nutrition-text">Get enough sleep: Adequate sleep is important for overall health and well-being. Aim for 7-8 hours of sleep per night.</p>
+    </div>
+    <div class="nutrition-item">
+      <img src="C:\Aarogi\AarogiImg\image13.jpeg" alt="Manage stress" class="nutrition-img">
+      <p class="nutrition-text">Manage stress: Chronic stress can lead to a variety of health problems. Finding healthy ways to manage stress, such as through meditation or yoga, can help improve overall health and well-being.</p>
+    </div>
+  </div>
+
+  <h1 style="text-align:left; width: 100%; margin-left: 15px; color: #333;">Benefits</h1>
+
+  <div class="slideshow-container">
+    <div class="slide-box">
+      <h3>Continuity of Care</h3>
+      <p>Aarogi provides continuity of care by providing one healthcare specialist to multiple individuals, which helps to build trust and understanding between the individual and the specialist over time.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Accessibility</h3>
+        <p>Aarogi's platform ensures that all individuals, regardless of location, have access to healthcare specialists. This is especially important for individuals living in remote or under-served areas.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Cost-effective</h3>
+        <p>By using Aarogi, individuals can save money on transportation costs and other expenses associated with in-person visits. The platform is also more affordable than traditional in-person care.</p>
+    </div>
+    <div class="slide-box">
+        <h3>Personalized Care</h3>
+        <p>Aarogi healthcare specialists are able to provide personalized care to each individual, taking into account their individual needs and concerns.</p>
+    </div>
+    <div class="slide-box">
+      <h3>Convenience</h3>
+      <p>Aarogi healthcare platform allows 50+ age group individuals to connect with healthcare specialists from the comfort of their own home, saving them time and effort compared to traditional in-person visits.</p>
+    </div>
+</div>
+  
+</div>
+    <div class="form_div">
+<button class="form-button" onclick="GetStart()">Get Started</button>
+  </div>
+   
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="#">About</a><br><br>
+        <a href="#">Careers</a><br><br>
+        <a href="#">Contact</a><br><br>
+        <a href="#">Terms and Conditions</a>
+      </div>
+      <div class="social-links">
+        <a href="#"><i class="fa fa-instagram"></i></a>
+        <a href="#"><i class="fa fa-youtube"></i></a>
+        <a href="#"><i class="fa fa-linkedin"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+      </div>
+      <div class="made_love">
+        <p>Made with <i class="fa fa-heart"></i> from India</p>
+      </div>
+    </div>
+  </footer>
+  
+    
+    
+    
+    
+    <script src="script.js"></script>
+    
+ 
+</body>
+</html>

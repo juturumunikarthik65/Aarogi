@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aarogi | Get Started</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+* {
+    box-sizing: border-box;
+}
+        .form-page-bg {
+    background-color: rgba(158, 95, 238, 1);
+}
+
+
+.form-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
+}
+
+
+h1{
+    text-align: center;
+    margin-bottom: 20px;
+    color:black;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+input {
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+    background-color: #3498db;
+    color: white;
+    font-size: 16px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+/* Add this CSS to your stylesheet */
+select {
+    font-size: 15px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    /* Additional design styles */
+    background-color: #f5f5f5;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Add error class styles */
+.error {
+border: 1px solid #ff0000;
+}
+/* Add this CSS to your stylesheet */
+.back-btn, .material-icons {
+    font-size: 40px;
+    color: white;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+}
+
+/* Add responsive styles for different screen sizes */
+@media only screen and (max-width: 768px) {
+    .back-btn {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .back-btn {
+        font-size: 18px;
+    }
+}
+
+    </style>
+</head>
+<body class="form-page-bg">
+    <button class="back-btn" id="back-btn" onclick="window.location.href='home.html'">
+        <i class="material-icons">arrow_back</i>
+    </button>
+    <div class="form-container form-center" id="form-container">
+        <h1>Welcome to Aarogi</h1>
+        <form>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <br>
+            <label for="category">Category:</label>
+            <select id="category" name="category" required>
+                <option value="" disabled selected>Select your option</option>
+                <option value="Baby Mother">Baby Mother</option>
+                <option value="50+ age person">50+ age person</option>
+            </select>
+            <br>
+            <label for="phone-number">Phone Number:</label>
+            <input type="tel" id="phone-number" name="phone-number" required>
+            <br>
+            <button class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <script>
+        
+        document.querySelector('.submit-btn').addEventListener('click', function(e){
+        var inputs = document.querySelectorAll('input, select');
+        var isValid = true;
+        for(var i = 0; i < inputs.length; i++){
+            if(inputs[i].value === ''){
+                isValid = false;
+                inputs[i].classList.add('error');
+            }else{
+                inputs[i].classList.remove('error');
+            }
+        }
+        if(!isValid){
+            e.preventDefault();
+        }
+    });
+
+
+    </script>
+</body>
+</html>
