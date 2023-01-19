@@ -17,6 +17,7 @@ body {
     background-color: rgba(158, 95, 238, 1);
 }
 
+
 .profile-icon {
     cursor: pointer;
 }
@@ -25,6 +26,8 @@ body {
     font-size: 40px;
     color: white;
 }
+
+
 
 h1 {
     color: white;
