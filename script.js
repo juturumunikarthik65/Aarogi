@@ -15,16 +15,6 @@ sideNavClose.addEventListener('click', () => {
     sideNav.style.display = "none";
 });
 
-let fillForm = document.querySelector('.fill-form-btn');
-fillForm.addEventListener('click', () => {
-    window.location.href = "index.html";
-});
-
-let formFilled = localStorage.getItem("formFilled");
-let fillFormBtn = document.querySelector(".fill-form-btn");
-if (formFilled === "true") {
-    fillFormBtn.style.display = "none";
-}
 
 let leftRectangle = document.querySelector('.rectangle-bar.left');
 let rightRectangle = document.querySelector('.rectangle-bar.right');
@@ -50,7 +40,7 @@ leftRectangle.addEventListener('click', function() {
 });
 
 function GetStart(){
-    window.location.href = 'C:\\Aarogi\\formpage.html';
+    window.location.href = 'Aarogi\\formpage.html';
 }
 
 

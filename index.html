@@ -5,7 +5,6 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aarogi | Healthcare Platform</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <style>
         * {
@@ -13,7 +12,10 @@
     box-sizing: border-box;
 }
 
-
+body {
+    margin:0;
+    padding: 0;
+}
 .loading-container {
     display: flex;
     flex-direction: column;
@@ -25,7 +27,7 @@
 
 .title {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
     font-size: 50px;
     font-weight: bold;
     color:white;
@@ -47,68 +49,8 @@
     color: white;
     font-weight: bold;
 }
-.form-page-bg {
-    background-color: rgba(158, 95, 238, 1);
-}
 
-
-.form-container {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #f5f5f5;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.75);
-}
-
-h1{
-    text-align: center;
-    margin-bottom: 20px;
-    color:black;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin-bottom: 20px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-}
-
-input {
-    margin: 10px 0;
-    padding: 10px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    font-size: 16px;
-}
-
-label {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-}
-
-button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-size: 16px;
-    margin: 0 10px;
-    cursor: pointer;
-}
-
-#skip-button {
-    background-color: #e74c3c;
-}
-
-
-    </style>
+</style>
 </head>
 <body>
     <div class="loading-container">
@@ -119,7 +61,7 @@ button {
     </div>
     <script>
         
-        let loadingBar = document.querySelector('.loading-bar span');
+let loadingBar = document.querySelector('.loading-bar span');
 let percent = 0;
 let interval = setInterval(() => {
     percent++;
