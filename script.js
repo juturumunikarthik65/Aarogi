@@ -40,7 +40,7 @@ leftRectangle.addEventListener('click', function() {
 });
 
 function GetStart(){
-    window.location.href = 'Aarogi\\formpage.html';
+    window.location.href = 'formpage.html';
 }
 
 
