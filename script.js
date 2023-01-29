@@ -108,23 +108,40 @@ leftRectangle.addEventListener('click', function() {
     righttInfo.style.display='none';
 });
 
-function GetStart(){
-    window.location.href = 'formpage.html';
-}
+
 
 document.getElementById("goto50+").addEventListener("click", function(){
   rightRectangle.scrollIntoView({ behavior: 'smooth' });
   this.innerHTML="Go Top";
 });
 
-// Request permission to show notifications
-Notification.requestPermission().then(function(permission) {
-  if (permission === "granted") {
-    // Show a notification after 5 seconds
-    setTimeout(function() {
-      new Notification("Notification Title", {
-        body: "This is the body of the notification."
-      });
-    }, 5000);
+
+const questions = document.querySelectorAll('.question');
+let currentAnswer;
+
+questions.forEach(question => {
+  question.addEventListener('click', () => {
+    if (currentAnswer) {
+      currentAnswer.classList.remove('show');
+    }
+    currentAnswer = question.nextElementSibling;
+    currentAnswer.classList.toggle('show');
+  });
+});
+
+const submitButton = document.getElementById("submitButton");
+
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const formSubmitted = urlParams.get("formSubmitted");
+
+if (formSubmitted === "true") {
+  submitButton.innerHTML = "Registration completed.";
+  submitButton.disabled = true;
+}
+
+submitButton.addEventListener("click", function() {
+  if (formSubmitted !== "true") {
+    window.location.href = "https://docs.google.com/forms/..." + "?formSubmitted=true";
   }
 });

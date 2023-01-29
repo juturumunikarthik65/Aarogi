@@ -729,3 +729,31 @@ p {
   font-size: 18px;
   margin-top: 20px;
 }
+
+#slide-box a {
+  width: 80%; font-size:20px; padding:6px;background-color: rgba(33, 255, 135, 1); text-decoration:none; box-shadow: 0px 5px 10px #888888; transition: all 0.3s ease-in-out; border-radius: 25px; margin:50px auto 0 auto;color:black; display:block; text-align:center;
+}
+
+#slide-box a:hover {
+  background-color: #ccc;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@media (max-width: 480px) {
+  #video_sec {
+    padding: 10px;
+  }
+  #video_sec h3 {
+    font-size: 20px;
+  }
+  #video_sec li {
+    font-size: 16px;
+  }
+}
