@@ -21,17 +21,33 @@
     
     <div class="side-nav" id="side-nav">
         <div class="side-nav-header">
-            <h2>Welcome, <span id="name"></span></h2>
+            <h2>Welcome</h2>
             <button class="close-btn" id="side-nav-close">&times;</button>
-        </div>
-        <div class="side-nav-content">
-            <!-- Add your side navigation content here -->
+        </div><hr>
+      
+        <div class="side-nav-content" id="nav-cont">
+          <a id="details">Details</a>
+          <a id="tips">Tips</a>
+          <a id="benifits">Benefits</a>
+          <a id="FAQs">FAQs</a>
+      </div>
         </div>
     </div>
   
     <div class="main-content">
         <img src="AarogiImg\image1.jpeg" alt="image1" class="main-content-img">
         <div class="main-content-text">Our goal is to make baby mothers and 50+ age group people be healthy</div>
+
+        
+        <div class="container">
+          <h2 id="enterNameText">Enter Your Name:</h2>
+          <input type="text" id="nameInput">
+          <button id="submitBtn">Submit</button>
+          <p id="welcomeMessage"></p>
+        </div>
+        
+        
+
         <div class="rectangle-bar-container">
             <div class="rectangle-bar left active" id="left-rectangle">Baby mother</div>
             <div class="rectangle-bar right" id="right-rectangle" style="border: solid 2px #333;">50+ age person</div>
@@ -40,7 +56,7 @@
     </div>
     <div class="left-info continer" id="image-container" style="width: 90%; margin:0 auto 0 auto;">
         <img src="AarogiImg\image2.jpeg" class="content-image" style="max-width:100%;">
-        <p style="margin-top: 20px;">As a mother, it's important to ensure that both you and your baby have a healthy life</p>
+        <p style="margin-top: 20px;" id="nav-details">As a mother, it's important to ensure that both you and your baby have a healthy life</p>
         <div class="aarogi-con" style="width:100%; position:relative; text-align:center; margin-top: 30px;">
         <p class="aarogi-text" style="background-color: rgba(158, 95, 238, 1); color:white; width: 70%; height: auto;  padding:10px; margin: 0 auto 0 auto; text-align: center; padding: 20px;">Aarogi is here to support you in ensuring a healthy life for both you and your baby</p>
         </div>
@@ -54,11 +70,11 @@
     </div>
      
  
-<div class="nutrition-container" style="margin-top: 60px;">
+<div class="nutrition-container" style="margin-top: 60px;" id="nav-tips">
     <h2 class="nutrition-heading">Nutrition for the Mother and Baby</h2>
     <div class="nutrition-item">
         <img src="AarogiImg\image4.jpeg" alt="milk and milk products" class="nutrition-img">
-        <p class="nutrition-text">Milk and Milk Products: Milk is a rich source of calcium, protein and essential vitamins and minerals. It is important for the growth and development of the baby. Milk products like curd and paneer are also rich in probiotics which aid in good digestion and boost the immune system.</p>
+        <p class="nutrition-text"><span style="color:rgba(158, 95, 238, 1);">Milk and Milk Products</span>: Milk is a rich source of calcium, protein and essential vitamins and minerals. It is important for the growth and development of the baby. Milk products like curd and paneer are also rich in probiotics which aid in good digestion and boost the immune system.</p>
     </div>
     <div class="nutrition-item">
         <img src="AarogiImg\image5.jpeg" alt="leafy greens" class="nutrition-img">
@@ -78,7 +94,7 @@
     </div>
     
   </div>
-  <h1 style="text-align:left; width: 100%; margin:30px 0 20px 20px; font-size: 30px; color: #333;">Benefits</h1>
+  <h1 style="text-align:left; width: 100%; margin:30px 0 20px 20px; font-size: 30px; color: #333;" id="nav-benifits">Benefits</h1>
   <div class="slideshow-container">
     <div class="slide-box">
       <h3>Continuity of Care</h3>
@@ -109,7 +125,7 @@
 
     <div class="right-info continer" id="image-container1" style="display: none; width: 90%; margin:0 auto 0 auto;">
         <img src="AarogiImg\image3.jpeg" class="content-image" style="max-width:100%; margin-top:5px; border-radius: 3px;">
-        <p>As a member of the 50+ age group, it is important to take care of your health in order to maintain wellness and strength</p>
+        <p style="margin-top: 20px;" id="nav-detail">As a member of the 50+ age group, it is important to take care of your health in order to maintain wellness and strength</p>
         <div class="aarogi-con" style="width:100%; position:relative; text-align:center; margin-top: 20px;">
           <p class="aarogi-text" style="background-color: rgba(158, 95, 238, 1); color:white; width: 70%; height:auto; padding:10px; margin: 0 auto 0 auto; text-align: center; padding: 20px;">Aarogi is here to support you in ensuring a healthy life with the help of technology</p>
           </div>
@@ -124,7 +140,7 @@
      
 
  
-<div class="nutrition-container" style="margin-top: 60px;">
+<div class="nutrition-container" style="margin-top: 60px;" id="nav-tip">
     <h2 class="nutrition-heading">Healthcare for the 50+ Age Group</h2>
     <div class="nutrition-item">
       <img src="AarogiImg\image9.jpeg" alt="Regular health check-ups" class="nutrition-img">
@@ -148,7 +164,7 @@
     </div>
   </div>
 
-  <h1 style="text-align:left; width: 100%; margin:30px 0 20px 20px; font-size: 30px; color: #333;">Benefits</h1>
+  <h1 style="text-align:left; width: 100%; margin:30px 0 20px 20px; font-size: 30px; color: #333;" id="nav-benifit">Benefits</h1>
 
   <div class="slideshow-container">
     <div class="slide-box">
@@ -174,10 +190,31 @@
 </div>
   
 </div>
-    <div class="form_div" style="margin-top: 100px;">
-<button class="form-button" onclick="GetStart()" style=" background-color: rgba(255, 33, 33, 1); color:white;">Get Started</button>
-  </div>
+<div class="form_div" style="margin-top: 100px;">
+  <button class="form-button" onclick="GetStart()" id="getstarted3" style=" background-color: rgba(255, 33, 33, 1); color:white;">Get Started</button>
+  <button  class="form-button" id="goto50+" style="background-color:rgba(255, 0, 153, 1); color:white; margin:25px 0 40px 0;">Go to 50+ age person</button>
+  
+    </div>
    
+
+    
+  <div class="faq-section" id="faq-section">
+    <h2 style="margin: 10px 0 10px 0;">FAQs</h2>
+    <div class="faq-question">
+      <div class="question">What is Aarogi?</div>
+      <div class="answer">Aarogi is an healthcare platform for mother baby and 50+ age group</div>
+    </div>
+    <div class="faq-question">
+      <div class="question">How to use Aarogi?</div>
+      <div class="answer">Click on get started link and and register and get video links and start conversation with healthcare specialist.</div>
+    </div>
+    <div class="faq-question">
+      <div class="question">What is the price for baby mother service?</div>
+      <div class="answer">It is Rs.299 per month</div>
+    </div>
+  </div>
+
+  
   <footer>
     <div class="footer-container">
       <div class="footer-links">
@@ -197,12 +234,9 @@
       </div>
     </div>
   </footer>
+
   
-    
-    
-    
-    
-    <script src="script.js"></script>
+  <script src="script.js"></script>
     
  
 </body>

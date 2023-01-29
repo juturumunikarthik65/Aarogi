@@ -27,7 +27,14 @@ body {
     color: white;
 }
 
-
+#myname {
+  width: 85%;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bolder;
+}
 
 h1 {
     color: white;
@@ -70,6 +77,38 @@ h1 {
 .side-nav-header h2 {
     margin: 0;
     font-size: 36px;
+}
+
+/* Add a background color */
+
+
+/* Style the links */
+.side-nav-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+/* Add hover effect to links */
+.side-nav-content a:hover {
+  background-color: #ddd;
+  color: #000;
+}
+
+/* Make the links take up the full width of the container */
+.side-nav-content a {
+  width: 100%;
+  text-align: left;
+}
+
+/* Responsive design */
+@media screen and (max-width: 600px) {
+  .side-nav-content a {
+      font-size: 16px;
+  }
 }
 
 #name {
@@ -122,7 +161,8 @@ h1 {
     
     .main-content-text {
         position: absolute;
-        top: 35%;
+        margin-top: 15px;
+        top: 20%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 1.2rem;
@@ -169,6 +209,8 @@ h1 {
         display: flex;
     }
     
+
+  
     /* Rectangle bars */
     .rectangle-bar {
         width: 50%;
@@ -505,3 +547,185 @@ h1 {
     }
   }
   
+  #afterSub {
+    display: none;
+  }
+
+ 
+  
+
+
+ 
+
+  #money-but {
+    width: 80%;
+    margin: 5px auto;
+    text-align: center;
+    background-color: #f2f2f2;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#money-but div {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+#money-but button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+#money-but button:hover {
+    background-color: #3e8e41;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+    #money-but {
+        width: 90%;
+        font-size: 16px;
+    }
+}
+
+#cal-det {
+  display: none;
+  width: 90%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+#calendar {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #f2f2f2;
+  border-radius: 10px;
+}
+
+#calendar th, #calendar td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+
+#calendar th {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#calendar td {
+  background-color: #fff;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  #calendar {
+      font-size: 12px;
+  }
+}
+
+.checkmark {
+  color: green;
+}
+
+.linked {
+  color: green;
+  text-decoration: underline;
+  font-size: 17px;
+}
+
+
+.faq-section {
+  border:3px solid black;
+  margin: 10px auto 10px auto;
+  padding: 10px;
+  width: 90%;
+}
+
+.faq-question {
+  border: 1px solid gray;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.question {
+  background-color: #f2f2f2;
+  padding: 10px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.question:hover {
+  background-color: #333;
+  color: white;
+}
+
+.answer {
+  display: none; /* hide answers by default */
+  background-color: #f9f9f9;
+  padding: 10px;
+}
+
+.show {
+  display: block; /* show answer when question is clicked */
+}
+
+.container {
+  width: 80%;
+  max-width: 600px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px #dddddd;
+  text-align: center;
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+#welcomeMessage {
+  font-size:35px;
+  color:rgba(77, 55, 106, 1);
+  font-weight: bolder;
+  top: -10px;
+  position: relative;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #dddddd;
+}
+
+#submitBtn {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  background-color: rgba(158, 95, 238, 1);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px #dddddd;
+  cursor: pointer;
+}
+
+#submitBtn:hover {
+  background-color: #3e8e41;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 20px;
+}
