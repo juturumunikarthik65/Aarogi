@@ -116,3 +116,15 @@ document.getElementById("goto50+").addEventListener("click", function(){
   rightRectangle.scrollIntoView({ behavior: 'smooth' });
   this.innerHTML="Go Top";
 });
+
+// Request permission to show notifications
+Notification.requestPermission().then(function(permission) {
+  if (permission === "granted") {
+    // Show a notification after 5 seconds
+    setTimeout(function() {
+      new Notification("Notification Title", {
+        body: "This is the body of the notification."
+      });
+    }, 5000);
+  }
+});
