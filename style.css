@@ -731,7 +731,7 @@ p {
 }
 
 #slide-box a {
-  width: 80%; font-size:20px; padding:6px;background-color: rgba(33, 255, 135, 1); text-decoration:none; box-shadow: 0px 5px 10px #888888; transition: all 0.3s ease-in-out; border-radius: 25px; margin:50px auto 0 auto;color:black; display:block; text-align:center;
+  width: 80%; font-size:20px; padding:6px;background-color: rgba(33, 255, 135, 1); text-decoration:none; box-shadow: 0px 5px 10px #888888; transition: all 0.3s ease-in-out; border-radius: 25px; margin:0 auto 0 auto;color:black; display:block; text-align:center;
 }
 
 #slide-box a:hover {
@@ -756,4 +756,155 @@ p {
   #video_sec li {
     font-size: 16px;
   }
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: rgba(158, 95, 238, 1);
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 50px;
+  font-weight: bold;
+  color:white;
+}
+
+.loading-bar {
+  width: 50%; /* adjust the width of the loading bar */
+  height: 20px; /* adjust the height of the loading bar */
+  background-color: #3498db; /* adjust the background color of the loading bar */
+  border-radius: 10px; /* adjust the border radius of the loading bar */
+  position: relative;
+}
+
+.loading-bar span {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-weight: bold;
+}
+
+#aarogi_home {
+  display: none;
+}
+
+.form-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  animation: slideIn 0.5s ease-out;
+  z-index: 3;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translate(-50%, -200%);
+  }
+  to {
+    transform: translate(-50%, -50%);
+  }
+}
+
+#back-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 600px) {
+  .form-container {
+    width: 90%;
+  }
+}
+
+#back-button1 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#back-button2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#back-button3 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#back-button4 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+#back-button5 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
 }

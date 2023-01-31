@@ -129,19 +129,96 @@ questions.forEach(question => {
   });
 });
 
-const submitButton = document.getElementById("submitButton");
 
-const queryString = window.location.search;
-const urlParams = new URLSearchParams(queryString);
-const formSubmitted = urlParams.get("formSubmitted");
 
-if (formSubmitted === "true") {
-  submitButton.innerHTML = "Registration completed.";
-  submitButton.disabled = true;
-}
+const registerButton = document.getElementById("register-button");
 
-submitButton.addEventListener("click", function() {
-  if (formSubmitted !== "true") {
-    window.location.href = "https://docs.google.com/forms/..." + "?formSubmitted=true";
-  }
+
+const formOverlay = document.getElementById("form-overlay");
+const backButton = document.getElementById("back-button");
+
+registerButton.addEventListener("click", function() {
+  formOverlay.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton.addEventListener("click", function() {
+  formOverlay.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+
+const registerButton1 = document.getElementById("register1");
+const formOverlay1 = document.getElementById("form-overlay1");
+const backButton1 = document.getElementById("back-button1");
+
+registerButton1.addEventListener("click", function() {
+  formOverlay1.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton1.addEventListener("click", function() {
+  formOverlay1.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+
+const registerButton2 = document.getElementById("register2");
+const formOverlay2 = document.getElementById("form-overlay2");
+const backButton2 = document.getElementById("back-button2");
+
+registerButton2.addEventListener("click", function() {
+  formOverlay2.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton2.addEventListener("click", function() {
+  formOverlay2.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+
+const registerButton3 = document.getElementById("register3");
+const formOverlay3 = document.getElementById("form-overlay3");
+const backButton3 = document.getElementById("back-button3");
+
+registerButton3.addEventListener("click", function() {
+  formOverlay3.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton3.addEventListener("click", function() {
+  formOverlay3.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+
+const registerButton4 = document.getElementById("register4");
+const formOverlay4 = document.getElementById("form-overlay4");
+const backButton4 = document.getElementById("back-button4");
+
+registerButton4.addEventListener("click", function() {
+  formOverlay4.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton4.addEventListener("click", function() {
+  formOverlay4.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+
+const registerButton5 = document.getElementById("register5");
+const formOverlay5 = document.getElementById("form-overlay5");
+const backButton5 = document.getElementById("back-button5");
+
+registerButton5.addEventListener("click", function() {
+  formOverlay5.style.display = "block";
+  document.body.style.overflow = "hidden";
+});
+
+backButton5.addEventListener("click", function() {
+  formOverlay5.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
 });

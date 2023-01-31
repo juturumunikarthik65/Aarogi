@@ -12,7 +12,39 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
 </head>
+
+
+
+
 <body>
+
+  <div class="loading-container" id="loading_content">
+    <div class="title">Aarogi</div>
+    <div class="loading-bar">
+        <span>0%</span>
+    </div>
+</div>
+<script>
+    
+  let loadingBar = document.querySelector('.loading-bar span');
+  let percent = 0;
+  let interval = setInterval(() => {
+  percent++;
+  loadingBar.innerHTML = `${percent}%`;
+  if(percent === 100) {
+      clearInterval(interval);
+      document.getElementById("loading_content").style.display="none";
+      document.getElementById("aarogi_home").style.display="block";
+  }
+  }, 30);
+  
+
+
+
+</script>
+  
+<span id="aarogi_home">
+
     <div class="header" id="home">
         <div class="profile-icon" id="profile-icon">
             <i class="material-icons">account_circle</i>
@@ -67,23 +99,48 @@
           </div>
           <h1 style="text-align:left; width: 100%; margin:40px 0 0px 20px; font-size: 30px; color: rgba(158, 95, 238, 1);">Aarogi Plans</h1>
         <div class="slideshow-container" style="margin-top: 10px;">
+
           <div class="slide-box" id="slide-box" style="background-color:#333;">
-            <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> baby mothers to have a one-hour video call with a healthcare specialist two days in a week </p>
-            <a id="submitButton">Register Now</a>
+            <h3 style="font-size: 25px;">Rs.149 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
+            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows 8 baby mothers to have a one-hour video call with a Doctor two days in a week for one month at Rs.149.</p>
+            <a id="register-button">Register Now</a>
           </div>
+
           <div class="slide-box" id="slide-box" style="background-color:#333;">
             <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> baby mothers to have a one-hour video call with a healthcare specialist two days in a week </p>
-            <a href="#">Register Now</a>
+            <span style="color: white;">Experienced Doctor</span>
+            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows 8 baby mothers to have a one-hour video call with a Doctor two days in a week for one month at Rs.299.</p>
+            <a id="register1">Register Now</a>
           </div>
+
           <div class="slide-box" id="slide-box" style="background-color:#333;">
-            <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> baby mothers to have a one-hour video call with a healthcare specialist two days in a week </p>
-            <a href="#">Register Now</a>
+            <h3 style="font-size: 25px;">Rs.1249 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
+            <span style="color: white;">Experienced Doctor</span>
+            <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows one baby mother to have a 20 mins video call with a Doctor three days in a week for one month at Rs.1249.</p>
+            <a id="register2">Register Now</a>
           </div>
           
-          </div>
+        </div>
+
+        <div class="form-overlay" id="form-overlay">
+  <div class="form-container" id="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdbkUDj12Ys-_VXCrxZ-ZpFXulZ06TqZykPrSmvZJ0MYuc5HQ/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+    <button id="back-button">Back</button>
+  </div>
+</div>
+<div class="form-overlay" id="form-overlay1">
+  <div class="form-container" id="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSet7keBFu1jUvHZCqHHfKpSDKi6zEPiaG9zR4jW3GEy6yNn7A/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+    <button id="back-button1">Back</button>
+  </div>
+</div>
+<div class="form-overlay" id="form-overlay2">
+  <div class="form-container" id="form-container">
+    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfFQB8hGcRAYqMzN7soaneaq6pnsgPRWwQoWe78mULsci9E_w/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+    <button id="back-button2">Back</button>
+  </div>
+</div>
+
           <div id="video_sec" style=" margin-top: 20px; width:90%;">
             <h3 style="color: blue;">What to expect in video call?</h3>
             <ul style="list-style-type: square;">
@@ -159,24 +216,50 @@
             <h1 style="text-align:left; width: 100%; margin:40px 0 0px 20px; font-size: 30px; color: rgba(158, 95, 238, 1);">Aarogi Plans</h1>
           <div class="slideshow-container" style="margin-top: 10px;">
             <div class="slide-box" id="slide-box" style="background-color:#333;">
-              <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> 50+ age group people to have a one-hour video call with a healthcare specialist two days in a week </p>
-              <a href="#">Register Now</a>
+              <h3 style="font-size: 25px;">Rs.149 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
+              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows 8 50+ age group people to have a one-hour video call with a Doctor two days in a week for one month at Rs.149.</p>
+              <a id="register3">Register Now</a>
             </div>
             <div class="slide-box" id="slide-box" style="background-color:#333;">
               <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> 50+ age group people to have a one-hour video call with a healthcare specialist two days in a week </p>
-              <a href="#">Register Now</a>
+              <span style="color: white;">Experienced Doctor</span>
+              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows 8 50+ age group people to have a one-hour video call with a Doctor two days in a week for one month at Rs.299.</p>
+              
+              <a id="register4">Register Now</a>
             </div>
             <div class="slide-box" id="slide-box" style="background-color:#333;">
-              <h3 style="font-size: 25px;">Rs.299 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
-              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows <span styyle="color:white;">10</span> 50+ age group people to have a one-hour video call with a healthcare specialist two days in a week </p>
-              <a href="#">Register Now</a>
+              <h3 style="font-size: 25px;">Rs.1249 Plan<span style="color:white; font-size:30px; padding:5px 1px 0 1px; font-weight:bolder;">/</span>month</h3>
+              <span style="color: white;">Experienced Doctor</span>
+              <p style="background-color: #333; margin-top:20px; font-size:20px;">This plan allows one 50+ age group person to have a 20 mins video call with a Doctor three days in a week for one month at Rs.1249.</p>
+              
+              <a id="register5">Register Now</a>
             </div>
             
             </div>
 
-            <div id="video_sec" style="  margin-top: 20px; width:90%;">
+            <div class="form-overlay" id="form-overlay3">
+              <div class="form-container" id="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfVwrTWV0eOv489lIGp8XgHqIXaVMoVcXEmeqiq3Eut1VyE8A/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+                <button id="back-button3">Back</button>
+              </div>
+            </div>
+
+            <div class="form-overlay" id="form-overlay4">
+              <div class="form-container" id="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeUsdTI7S_ahVi3sxkohq8IvoFyMMSY2gd7CMDGBq-CWzv-Fg/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+                <button id="back-button4">Back</button>
+              </div>
+            </div>
+
+            <div class="form-overlay" id="form-overlay5">
+              <div class="form-container" id="form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffH8F_MAusepknQZQtC3EvsBYhrPBzzOC4saA0NoLh1YpJoQ/viewform?usp=sf_link" id="form" width="100%" height="600px" style="margin:0 auto 0 auto;"></iframe>
+                <button id="back-button5">Back</button>
+              </div>
+            </div>
+
+
+            <div id="video_sec" style="margin-top: 20px; width:90%;">
               <h3 style="color: blue;">What to expect in video call?</h3>
               <ul style="list-style-type: square;">
                 <li style="animation: fadeIn 1s ease-in;">Doctors will guide you on topics related to your baby and motherhood</li>
@@ -248,18 +331,37 @@
     <h2 style="margin: 10px 0 10px 0;">FAQs</h2>
     <div class="faq-question">
       <div class="question">What is Aarogi?</div>
-      <div class="answer">Aarogi is an healthcare platform for mother baby and 50+ age group</div>
+      <div class="answer">Aarogi is an healthcare platform for mother baby and 50+ age group to connect with Doctors & Healthcare specialists</div>
     </div>
     <div class="faq-question">
       <div class="question">How to use Aarogi?</div>
-      <div class="answer">Click on get started link and and register and get video links and start conversation with healthcare specialist.</div>
+      <div class="answer">Choose your Aarogi plan, register, and we'll connect with you via WhatsApp. We'll send a link to join our WhatsApp group where you can connect with doctors and receive video links at the date & time you selected in the registration form</div>
     </div>
     <div class="faq-question">
-      <div class="question">What is the price for baby mother service?</div>
-      <div class="answer">It is Rs.299 per month</div>
+      <div class="question">How long will it take to connect with me through WhatsApp after I register?</div>
+      <div class="answer">You'll receive all details via WhatsApp within 12 hours of after submitting the registration form </div>
+    </div>
+    <div class="faq-question">
+      <div class="question">When should I pay the money for the plan i choosed?</div>
+      <div class="answer">You can pay money after completing the 5 video calls with the Doctors from the day you registed</div>
+    </div>
+    <div class="faq-question">
+      <div class="question">How should I pay money?</div>
+      <div class="answer">You will get a payment link in your WhatsApp to pay the money for your registed plan</div>
+    </div>
+    <div class="faq-question">
+      <div class="question">Where will the video call take place?</div>
+      <div class="answer">The video call take place in Google meet <br> <a href="https://play.google.com/store/apps/details?id=com.google.android.apps.meetings&hl=en_US"><span style="color: blue;">Click here to download Google meet app</span></a></div>
+    </div>
+    <div class="faq-question">
+      <div class="question">Are the doctors and healthcare specialists experienced?</div>
+      <div class="answer">Yes, we have experienced doctors and healthcare specialists</div>
     </div>
   </div>
+ 
 
+  
+  
   
   <footer>
     <div class="footer-container">
@@ -281,9 +383,17 @@
     </div>
   </footer>
 
+</span>
+
+
+    
   
+
   <script src="script.js"></script>
     
  
 </body>
+
+
+
 </html>
