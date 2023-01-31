@@ -44,45 +44,6 @@ document.getElementById("FAQs").addEventListener("click", function(){
 });
 
 
-window.addEventListener("load", function() {
-  const submitBtn = document.getElementById("submitBtn");
-  const nameInput = document.getElementById("nameInput");
-  const welcomeMessage = document.getElementById("welcomeMessage");
-  const enterNameText = document.getElementById("enterNameText");
-
-  submitBtn.addEventListener("click", function() {
-    const name = nameInput.value;
-    if (!name) {
-      alert("Please enter your name");
-      return;
-    }
-    localStorage.setItem("name", name);
-    welcomeMessage.innerHTML = `Welcome ${name}`;
-    nameInput.style.display = "none";
-    submitBtn.style.display = "none";
-    enterNameText.style.display = "none";
-  });
-
-  const name = localStorage.getItem("name");
-
-  if (name) {
-    welcomeMessage.innerHTML = `Welcome ${name}`;
-    nameInput.style.display = "none";
-    submitBtn.style.display = "none";
-    enterNameText.style.display = "none";
-  }
-});
-
-// Delay the execution of the code for 10 seconds (10,000 milliseconds)
-setTimeout(function() {
-  // Check if a name has been stored in local storage
-  var name = localStorage.getItem("name");
-  if (!name) {
-    // Display an alert if a name has not been stored
-    alert("Please input your name.");
-  }
-}, 10000);
-
 
 
 let leftRectangle = document.querySelector('.rectangle-bar.left');
