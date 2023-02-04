@@ -50,14 +50,14 @@ window.addEventListener("load", function() {
       alert("Please enter your name");
       return;
     }
-    localStorage.setItem("name", name);
+    sessionStorage.setItem("name", name);
     welcomeMessage.innerHTML = `Welcome ${name}`;
     nameInput.style.display = "none";
     submitBtn.style.display = "none";
     enterNameText.style.display = "none";
   });
 
-  const name = localStorage.getItem("name");
+  const name = sessionStorage.getItem("name");
 
   if (name) {
     welcomeMessage.innerHTML = `Welcome ${name}`;
@@ -66,17 +66,6 @@ window.addEventListener("load", function() {
     enterNameText.style.display = "none";
   }
 });
-
-// Delay the execution of the code for 10 seconds (10,000 milliseconds)
-setTimeout(function() {
-  // Check if a name has been stored in local storage
-  var name = localStorage.getItem("name");
-  if (!name) {
-    // Display an alert if a name has not been stored
-    alert("Please input your name.");
-  }
-}, 10000);
-
 
 const registerButton3 = document.getElementById("register3");
 const formOverlay3 = document.getElementById("form-overlay3");
