@@ -38,6 +38,24 @@ document.getElementById("FAQs").addEventListener("click", function(){
   document.getElementById("side-nav").style.display="none";
 });
 
+document.getElementById("helReg").addEventListener("click", function(){
+const formOverlay5 = document.getElementById("form-overlay5");
+const backButton5 = document.getElementById("back-button5");
+
+
+  formOverlay5.style.display = "block";
+  document.body.style.overflow = "hidden";
+
+
+backButton5.addEventListener("click", function() {
+  formOverlay5.style.display = "none";
+  document.body.style.filter = "none";
+  document.body.style.overflow = "auto";
+});
+  
+  document.getElementById("side-nav").style.display="none";
+});
+
 window.addEventListener("load", function() {
   const submitBtn = document.getElementById("submitBtn");
   const nameInput = document.getElementById("nameInput");
